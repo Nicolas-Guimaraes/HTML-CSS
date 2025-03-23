@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+h1{
+    font: 2em 'Times New Roman', Times, serif;
+}
+
+h2{
+    font: 1.5em 'Times New Roman', Times, serif;
+}
+h3{
+    font:1em 'Times New Roman', Times, serif;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    color:antiquewhite;
+    text-align: justify;
+}
+
+
+#t-principal{
+    background-color: rgb(134, 35, 227);
+    text-align: center;
+    border-radius: 10px;
+    color:white
+}
+
+.topico{
+    background-color: rgba(50, 205, 50, 0.787);
+    border-radius: 10px;
+    color: white;
+}
+
+.tangente{
+    background-color: rgb(228, 226, 226);
+    text-align: justify;
+    height: 75px;
+    color:black;
+    font-weight: bold;
+}
+
+.tag::before{
+    content: "<";
+}
+.tag::after{
+    content:'>';
+}
+
+
+.exemplo-caixa{
+    padding: 20px;
+    margin: 20px;
+    border: solid 10px;
+    text-align: center;
+    outline: 4px solid red;
+}
+
+.exemplo-bec{
+    text-align: center;
+    border: 10px solid crimson;
+    outline: 8px solid blue;
+    /*
+    Completo:
+    border-width
+    border-style
+    border-color
+
+    outline-width
+    outline-style
+    outline-color
+    */
+}
+.exemplo-pem{
+    margin: 5px 10px 5px 10px;
+    padding: 10px 5px 10px 5px;
+    /*
+    Outra forma de obter o mesmo resultado:
+
+    margin: 5px 10px;
+    padding: 5px 10px;
+    */
+}
+ol{
+    color:white
+}
+
+dl{
+    color: whitesmoke;
+}
+
+dt{
+    font:  bold 1.5em 'Times New Roman', Times, serif;
+}
+
+.exemplo-sombra{
+    background-color: whitesmoke;
+    width: 400px;
+    height: 100px;
+    box-shadow: 5px 5px 10px violet;
+    /*
+    Os valores são:
+    Deslocamento horizontal(h-offset): auto-explicativo, valor positivo move pra direita e negativo esquerda.
+
+    Deslocamento vertical(v-offset): mesma coisa só muda o vetor.
+
+    Embaçamento(blur): quanto a sombra vai se espalhar pelo fundo.
+
+    Cor: cor da sombra, é possivel usar transparência também.
+    */
+}
+
+.preto{
+    color:black
+}
+
+.exemplo-bordas{
+    background-color: white;
+    height: 100px;
+    width: 300px;
+    border-radius: 5px 30px;
+    /*
+    Outras formas:
+
+    border-radius: 5px 30px 5px 30px
+
+    Não poderia usar apenas um valor pois deixaria o resultado simêtrico.
+    
+    */
+}
+
+.exemplo-bordas2{
+    background-color: white;
+    height: 100px;
+    width: 300px;
+    border-style:dotted
+}
+
+.exemplo-bordas3{
+    background-color: purple;
+    height: 100px;
+    width: 300px;
+    border: 10px solid purple;
+    border-image-source: url(imagens/download.jpeg);
+    border-image-slice: 300;
+    border-image-repeat: repeat;
+    /*
+    shorthand:
+    border-image: url(imagens/download.jpeg) 300 repeat;
+
+    OBS: a borda é necessaria pra isso, caso você não queira
+    colocar uma cor também pode deixa-lá transparente.
+    */
+}

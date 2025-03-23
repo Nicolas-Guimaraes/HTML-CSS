@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução as CSS</title>
+    <link rel="stylesheet" href="../test page style.css">
+    <style>
+        /* *{ } indica uma configuração global*/
+
+        body{
+            background-image: linear-gradient(45deg, rgb(0, 0, 0), gray, white);
+        }
+    </style>
+</head>
+<body>
+    <h1>Introdução as CSS</h1>
+        <p>
+            Diferente dos outros, esse documento contém anotações sobre os conteúdos dos pdf 12 à 13, os quais serão separados pelos títulos.<br>
+            Ademais, não anotarei aqui algumas coisas para não gerar redundância com os outros materiais, por isso algumas partes vão parecer meio vazias.<br>
+            
+        </p>
+        <hr>
+    <h2>12-Trabalhando com estilos</h2>
+        <p>
+            Para evitar problemas com acentuação adicione no inicio do documento a regra em CSS <code>@charset "UTF-8";</code> a qual indica a compatibilidade de codificação com o padrão UTF-8.
+        </p>
+        <p>
+            Para adicionar comentarios nas CSS basta usar "/* */".
+        </p>
+        <p>
+            CSS inline style sempre vai sobrepor CSS internal style.<br>
+            CSS internal style sempre vai sobrepor CSS external style.<br>
+        </p>
+        <p>
+            Ainda sim, é bom lembrar:<br>
+            CSS externo=sempre que puder<br>
+            CSS interno= pequenas alterações, no máximo.<br>
+            CSS inline= esquece que existe, usa pra teste estorando.
+        </p>
+        <h2>13-Cores</h2>
+            <p>
+                Ao invês de anotar sobre esse documento vou deixar um link para download e um índice.
+                <ol type="I">
+                    <li>A emoção das cores(com lista resumo)</li>
+                    <li>O círculo cromático</li>
+                    <li>Adobe Color</li>
+                    <li>Aplicando cores ao site</li>
+                        <ul>
+                            <li>Como aplicar</li>
+                            <li>Como representar cores</li>
+                            <li>Como usar gradientes em CSS</li>
+                        </ul>
+                    <li>Qual o código da cor(Extensão Colorzilla)</li>
+                </ol>
+            </p>
+            <p>
+                Um desse tópicos que vou detalhar é como usar gradientes.<br>
+                A primeira coisa interessante é que se usa "background-image" ao ínves de "color".<br>
+                Depois define como vai ser o gradiente, nesse caso usei o linear, mas poderia usar um "radial-gradient", e nos valores colocar seu angulo ou direção("to right, to left") e finalmente as cores, o gradiente muda dependendo da ordem.<br>
+                OBS: se usasse o radial, colocaria "circle" no lugar do ángulo.
+            </p>
+
+        <h3>Dicas</h3>
+            <p>
+            Algo muito interessante é tomar cuidado com o background preto e letras brancas, por gerar um cansaço visual grande, sites como o da netflix usam isso, porém possuem pouco conteúdo.
+            </p>
+            <p>
+                Quando estiver decidindo uma paleta de cores, lembre das cores preto e branco, já que provavelmente a página vai ser branca e a letra preta.<br>
+                Para começar a decidir a paleta primeiro busque uma cor pela emoção que ela passa e a partir disso busque as outras.<br>
+                Outra forma de decidir é se a logo do cliente tem uma marca cor primaria muito forte, decidindo as outras a partir dela.<br>
+                Geralmente uma paletra varia de 3 à 5 cores.
+            </p>
+</body>
+</html>

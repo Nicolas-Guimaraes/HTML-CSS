@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* o "*" indica um parametro global*/
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #573699;
+}
+main{
+    background-color: snow;
+    border-radius: 5px;
+    /*Deixa a borda redonda*/
+    box-shadow: 10px 10px 10px #4e00ea8b;
+    /* os valores representam, respectivamente: 10px(pro lado), 10px(pra baixo), 10px(de espalhamento/difusão e cor da sombra.*/
+    width: 600px;
+    padding: 10px;
+    /*espacinho entre as letras*/
+    margin: auto;
+    /*centraliza*/
+}
+
+h1{
+    color: #EB7A00;
+    text-align: center;
+    text-shadow: 5px 5px 5px #c4660257;
+}
+
+h2{
+    color:#00EB25;
+}

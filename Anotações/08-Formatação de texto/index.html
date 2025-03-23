@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semântica na html</title>
+    <link rel="stylesheet" href="../test page style.css">
+</head>
+<body>
+ <h1>
+    Semântica na html
+ </h1>
+ <hr>
+ <p>
+    <strong>
+        Semântica: significado dos vocábulos, por oposição à sua forma.
+    </strong>
+ </p>
+ <p>
+A relação entre semântica e a html, é que a semântica da mais valor ao significado da palavra do que sua forma.<br>
+Da mesma maneira a html5, que possue tags com significado, deixando as tags da html4 que só mudavam o formato obsoletas. Atualmente, a html foca unicamente no conteúdo semântico, deixando a forma do texto unicamente para as CSS.<br>
+Logo algumas tags que só realizam formatações visuais devem ser substituidas, como:
+ </p>
+ <p>
+    <b>&lt;b&gt;(bold)</b> deve ser substituida por <strong>&lt;strong&gt;</strong>.
+ <br>
+    <i>&lt;i&gt;(italico)</i> deve ser substituida por <em>&lt;em&gt;</em>.
+ </p>
+ <p>
+    <mark>Para marcar texto use a tag &lt;mark&gt;.</mark>
+ </p>
+ <p>
+    Obiviamente, tem algumas exceções como a <small>tag &lt;small&gt;</small> que continua sendo usada, diferente da sua semelhante &lt;big&gt;.
+ </p>
+ <p>
+    A tag <del>&lt;del&gt;</del> significa textos que devem ser desconsiderados.
+ </p>
+ <p>
+    Já a <ins>tag &lt;ins&gt; significa textos que devem ser lidos com atenção.<br>
+    Ela substitui a <u>tag &lt;u&gt; que apenas sublinhava os textos</u></ins>
+ </p>
+ <p>
+    A tags &lt;sub&gt; e &lt;sup&gt;, para textos <sub>subscrito</sub> e <sup>sobreescirto.</sup>
+ </p>
+ <p>
+    <code>
+        <pre  style="color: whitesmoke;">
+            As tags &lt;code&gt;, para indicar um código 
+            e &lt;pre&gt; para manter a formatação do documento.
+        </pre>
+    </code>
+ </p>
+ <p>
+    Para fazer citações no meio de paragrafos use a <q>tag &lt;q&gt;</q><br>
+    Já se quiser um paragrafo inteiro use a tag &lt;blockquote&gt;, usando o parametro cite para linkar o texto original:
+ </p>
+ <p>
+    <blockquote cite="https://www.pensador.com/autor/urias/"; style="color:whitesmoke">
+        Não tenho cor, nem madrinha<br>
+        Nasci no mundo, sou sozinha<br>
+        Não tenho pressa, não tenho plano, não tenho dono 
+    </blockquote>
+ </p>
+ <p>
+    Na <abbr title="Hypertext markup language">HTML5</abbr> também se usa a tag <abbr title="abreviation">&lt;abbr&gt;</abbr> para marcar abreviações, com o "title" para mostrar seu significado.
+ </p>
+ <p>
+    E a tag mais importante de todas, a &lt;bdo&gt;, com o parametro "dir", par sinalizar par que direção o texto será invertido:
+    <br>
+    <bdo dir="rtl">Do caralho essa aqui tá.</bdo>
+ </p>
+</body>
+</html>

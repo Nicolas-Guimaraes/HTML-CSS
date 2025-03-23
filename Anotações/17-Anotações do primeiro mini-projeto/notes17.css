@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+:root{
+
+    --corekko: #C1DB0D;
+    --corekko2: #575C33;
+    --corsilco: #DB1C0D;
+    --corsilco2: #5C3633;
+    --corjinx: #0E71DB;
+    --corjinx2:#355C86;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+header{
+    background-color: black;
+    padding: 5px 50px 20px 30px;
+    
+    color: white;
+    font-size: 0.8em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+main > .jinx{
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma Verdana, sans-serif;
+
+    margin: 5px 5px 5px 250px;
+    background-color: var(--corjinx);
+    box-shadow: 5px 5px 10px#355c863e;
+    padding: 12px;
+    border-radius: 30px;
+}
+
+main > .ekko{
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma Verdana, sans-serif;
+
+    margin: 5px 250px 5px 5px;
+    background-color: var(--corekko);
+    box-shadow: 5px 5px 10px#355c8636;
+    padding: 12px;
+    border-radius: 30px;
+}
+
+
+    
+
+
+

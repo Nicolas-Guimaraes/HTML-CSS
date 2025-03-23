@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/*Regrinha caso haja algum problema na acentuação*/
+
+body{
+    background-color:rgb(25, 25, 25);
+    }
+h1{
+    color:whitesmoke; background-color: violet; text-align: center;
+}
+h2{
+    color:whitesmoke; background-color: violet; text-align: center;
+}
+h3{
+    color: whitesmoke; 
+}
+p{
+    color:whitesmoke;
+    text-align: justify;
+}
+ul{
+    color:whitesmoke;
+}
+ol{
+    color:whitesmoke;
+}
+dl{
+    color: whitesmoke;
+}

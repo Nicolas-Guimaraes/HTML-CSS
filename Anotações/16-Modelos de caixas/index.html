@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelos de caixas</title>
+    <link rel="stylesheet" href="style16.css">
+</head>
+<body>
+    <h1 id="t-principal">Modelos de caixa</h1>
+    <h2 class="topico">Caixa</h2>
+        <p>
+            O conceito "box model(modelos de caixa)", significa que grande partes dos elementos tem um formato de caixa, as quais são como containers que amarzenam conteúdo ou outras caixas.
+        </p>
+        <p class="tangente">
+            Dica: Você pode usar o "Devtools" do google para fazer testes, já que as mudanças lá não alteram o documento original, para fazer isso basta ir no console na parte de "inspencionar".<br>
+            OBS: "User agent" é o navegador.
+        </p>
+    <h2 class="topico">Anatomia de uma caixa</h2>
+        <p>
+            Todos os navegadores enxergam uma caixa da seguinte forma:
+        </p>
+        <p class="exemplo-caixa">
+            Contéudo
+        </p>
+        <p>
+            Por padrão toda caixa é composta apenas pelo contéudo, uma exceção é o elemento <code>&lt;body&gt;</code>, que já vem com a <code>margin de 8 px</code>.<br>
+            O contéudo possui largura(width) e altura(height), o conjunto dessas propriedades é chamada de "box-size", o  qual não inclui as medidas padding, border, outline e margin.<br>
+            Depois do contéudo e seu tamanho temos, respectivamente:<br>       
+        </p>
+        <ol>
+            <li><code>padding</code>(preenchimento)<br></li>
+            <li><code>border</code>(borda), ela pode ter espessura, cor e formato.<br></li>
+            <li><code>outline</code>(contorno), é um traçado visual criado fora da borda, sua espessura faz parte da margem estabelicida, não é muito utlizada.<br></li>
+            <li><code>margin</code>(margem).<br></li>
+        </ol>
+        <p class="tangente">
+            Tamanho total: some as medidas da caixa que compoem um elemento, com exceção do <code>outline</code>, pois ele utiliza a medida da margem.<br>
+            Por exemplo, o tamanho total da caixa "contéudo" é:<br>
+            20+20+10=50px
+        </p>
+        <p class="tangente">
+            Novidade das CSS3: A propriedade "box-sizing" permite definir se height e width serão medidas a partir do conteúdo da caixa, com o valor "content-box" ou a partir da borda, com o valor "border-box".
+        </p>
+        <h3 class="topico">Shorthand: Border e outline</h2>
+        <p>
+            as ordem para as duas é a mesma: largura, estilo e cor.
+        </p>
+        <p class="exemplo-bec">exemplo</p>
+        <h3 class="topico">Padding e margin</h2>
+        <p>
+            Toda elemento de caixa possui quatro valores para padding e margen, respecitvamente: '-top', '-right', '-bottom' e '-left'. Podemos colocar apenas um valor que ele será aplicado simetricamente em todas as direções; usar o shorthand, aplicando os valores em ordem horaria ou usar apenas duas medidas, caso as medidas '-top' e '-bottom' e '-right' e 'left' forem iguais:
+        </p>
+        <p class="exemplo-pem">
+            exemplo            
+        </p>
+        <p>
+            Também pode centralizar uma margem fazendo o navegador calcular as medidas 'right' e 'left' do  <code class="tag">"body"</code> automaticamente usando o parametro:<br>
+            <code>margin: auto</code>
+        </p>
+    <h2 class="topico">Tipos de caixa</h2>
+        <p>
+            <strong>block level:</strong> Elemento que sempre inicia em uma nova linha e ocupa largura do total do elemento onde está contido, ou seja, se não estiver contido em outra caixa ocupara todo o <code class="tag">body</code>.<br>
+            O elemento block level mais conhecido é o <code class="tag">div</code> e suas variações semânticas <code class="tag">section</code>, <code class="tag">aside</code>,  <code class="tag">main</code>, etc.<br>
+            Na imagem outros elementos que também são blocklevel:
+        </p>
+        <img src="imagens/blocklevel.jpg" width="650" alt="elementos blocklevel"> 
+        <p>
+            <strong>Inline level:</strong> Não inicia em uma nova linha e ocupa exatamente o ponto que foi definido e sua largura ocupa apenas o tamanho relativo ao conteúdo.<br>
+            Alguns exemplos de elementos inline level:
+        </p>
+        <img src="imagens/inlinelevel.jpg" width='650' alt="elementos inline level">
+    <h2 class="topico">Grouping tags e Semantic tags</h2>
+        <p>
+            As tags de agrupamento eram apenas duas a <code class="tag">div</code>, elemento tipo blocklevel e <code class="tag">spam</code>, elemento tipo inlinelevel. Com a chegada da HTML5 surgiram as tags de agrupamento semânticas, mas isso não significa que essas duas ficaram obsoletas, apenas não faz tanto sentido usar elas para dividir as partes do documento.<br>
+            Os principais agregadores semânticos são:
+        </p>
+        <dl>
+            <dt>Header</dt>
+                <dd>Se refere a cabeçalhos, pode ser tanto do site quanto de artigos ou seções, normalmente incluind títulos e subtítulos(<code class="tag">h1-h6</code>). Também usado para conter menus de navegação.</dd>
+            <dt>Nav</dt>
+                <dd>Define uma área que contém os links de navegação pela estrutura de páginas do website, geralmente a <code class="tag">nav</code> está contida dentro de um <code class="tag">Header</code>.</dd>
+            <dt>Main</dt>
+                <dd>Abriga o conteúdo principal do site. Normalmente concentra as seções, artigos e contéudos periféricos.</dd>
+            <dt>Section</dt>
+                <dd>Cria seções para sua página, podendo conter o conteúdo diretamente no seu corpo ou dividido em artigos(articles). Segundo a documentação da W3C: "uma seção é agrupamento temático de contéudos, tipicamente com um cabeçalho.</dd>
+            <dt>Article</dt>
+                <dd>Um artigo contém um contéudo que pode ser lido de forma independente e que diz respeito ao mesmo assunto.Pode ser usado para delimitar um post de blog, forúm, noticia, artigo, etc.</dd>
+            <dt>Aside</dt>
+                <dd> Contém um conteúdo periférico e complementar ao principal de um artigo ou seção, geralmente está posicianado ao lado de um determinado texto ao no meio dele. Como vai ser feito agora.</dd>
+                <aside>
+                    <p class="tangente">
+                        Multiplos níveis: A estrutura do site é definada pela sua criatividade e planejamento, é possivel criar uma <code class="tag">article</code> dentro de uma <code class="tag">section</code>, não existem limitações quanto a isso.
+                    </p>
+                </aside>
+                <dt>Fotter</dt>
+                    <dd>É um agrumento que define um rodapé para o site, article ou aside, não é relacionado ao contéudo, mas possui informações sobre a autoria do conteúdo, links adicionais, mapa do site, documentos relacionados, etc.</dd>
+        </dl>
+    <h2 class="topico">Sombras nas caixas</h2>
+        <p>
+            Para adicionar uma sombra basta usar a propriedade "box-shadow" e seus 4 valores.<br>
+            A explicação está nas CSS desse documento.
+        </p>
+        <article class="exemplo-sombra">
+            <h2>Exemplo</h2>
+            <p class="preto">
+                Coloquei a sombra roxa pq o fundo é preto né pai.
+            </p>
+        </article>
+        <p class="tangente">
+            Usar sombras pode deixar o efeito visual muito pesado, também evite usar sombras coloridas, use transparencia para obter um resultado mais suave.
+        </p>
+    <h2 class="topico">Bordas decoradas</h2>
+        <p>
+            <strong>Vértices arrendodados:</strong> Basta usar a propriedade border-radius, os valores dela funcionam de forma semelhante a margem:<br>
+            Se colocarmos apenas um ela será aplicado simetricamente.<br>
+            Se colocarmos 2 elas serão aplicados no canto superior esquerdo e direito e seus opostos.<br>
+            Ou podemos colocar as 4 valores diferentes, a ordem dos valores é horaria, começando no canto superior esquerdo.
+        </p>
+        <article class="exemplo-bordas">
+            <p class="preto">
+                Exemplo
+            </p>
+        </article>
+        <p>
+            Outros valores que também podemos usar na borda são:double, groove, doted(pontilhado.).
+        </p>
+        <article class="exemplo-bordas2">
+        </article>
+        <p>
+            Também pode usar uma imagem como borda
+        </p>
+        <article class="exemplo-bordas3">
+        </article>
+    </body>
+    </html>

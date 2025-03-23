@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas na HTML</title>
+    <link rel="stylesheet" href="../test page style.css">
+</head>
+<body>
+    <h1>
+        Listas na html
+    </h1>
+    <hr>
+    <p>
+        A HTML tem 3 tipos de listas:
+         <abbr title="ordered list">&lt;ol&gt;</abbr>, lista ordenada;
+         <abbr title="unordered list">&lt;ul&gt;</abbr>, lista não ordenada e 
+         <abbr title="definition list">&lt;dl&gt;</abbr>, lista de definição.
+    </p>
+    <h2>Lista ordenada e não ordenada</h2>
+    <p>
+        Ambas usam a tag <abbr title="list item">&lt;li&gt;</abbr> para identificar cada item.
+    </p>
+    <p>
+        Na tag &lt;ol&gt; o parâmetro "type" para configurar o tipo de marcador da lista, com os seguintes valores:
+    </p>
+    <ul type="circle">
+        <li>1- Cria listas numeradas</li>
+        <li>A- Cria listas alfabéticas em maiúsculas</li>
+        <li>a- " " em minúsculas</li>
+        <li>I-Cria listas com algarismos romanos em maiúsculas</li>
+        <li>i-"" em minúsculas</li>
+    </ul>
+    <p>
+        E o valor do parâmetro "start" define onde começa a contagem
+    </p>
+    <p>
+        Já na tag &lt;ul&gt; o parâmetro "type" tem os seguintes valores:
+    </p>
+    <ul type="square">
+        <li>disc(padrão)- bola preta totalmente pintada</li>
+        <li>circle- bola preta sem preenchimento</li>
+        <li>square-quadrado preto com preenchimento</li>
+    </ul>
+    <h2>Listas de definição</h2>
+    <p>
+        A lista de definição é um pouco diferente, pois usa tags diferentes e não possui marcadores, ela usa a tag &lt;dl&gt; para definir a lista, os termos são definidos pela tag &lt;dt&gt; e a descrição é definada pela tag &lt;dd&gt;:
+    </p>
+        <dl>
+            <dt>míngua</dt>
+            <dd>pobreza extrema; indigência, penúria.</dd>
+            <dt>hemeroteca</dt>
+            <dd>setor das bibliotecas onde se encontram coleções de jornais, revistas, periódicos e obras em série.</dd>
+        </dl>
+   
+</body>
+</html>

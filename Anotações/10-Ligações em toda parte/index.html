@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligações em toda parte</title>
+    <link rel="stylesheet" href="../test page style.css">
+</head>
+<body>
+    <h1>Hyperlinks</h1>
+    <p>
+        Todas vez que clicamos em um local para ir a outra página, outro site ou baixar um arquivo estamos interagindo com um hyperlink.
+    </p>
+    <p>
+        Para criar um usamos a tag <abbr title="âncora(anchor)">&lt;a&gt;</abbr>, com o atributo href, que referencia o hipertexto desejado e tem como valor a url desse hipertexto.
+    </p>
+    <p>
+        Outros dois atributos interessantes são o <q>hreflang</q> e <q>target</q>, respectivamente:<br>
+        <dl>
+            <dt>hreflang</dt>
+                <dd>Indica a lingua do site linkado.</dd>
+            <dt>target</dt>
+                <dd>Controla como o hyperlink vai abrir. Por padrão o link abre na mesma janela do site, que é desejado quando uma outra página do nosso site que está linkada, porém não quando o link é outro site, por exemplo. Para controlar isso os valores são:</dd>
+                    <ul>
+                        <li>self(padrão)-abre o link na janela atual</li>
+                        <li>blank-abre o link em uma nova janela.</li>
+                        <del>
+                            <li>top- desfaz os frames e abre o destino no navegador completo</li>
+                            <li>parent- similar ao <code>top</code> em uma referencia a janela mãe.</li>
+                            <li>nome-do-frame caso esteja usanod frames, indicar o nome da janela ao abrir.</li>
+                            (Deletado porque o uso de frames é uma tecnica em desuso)
+                        <!--Ainda bem pq não entendi porra nenhuma desses dois.-->                        
+                        </del>
+                    </ul>
+        </dl>
+    </p>
+ <p>
+  Outro atributo bem interessante é o <abbr title="relação(relationship)"><q>rel</q></abbr>, o qual mostra a relação entre os documentos, e consequentemente o tipo de destino do link. Ele possui varios valores, no contexto da página alguns interessantes são:
+    <ul>
+        <li>next-linka para a próxima parte do documento atual.</li>
+        <li>prev-linka para a parte anterior do documento atual.</li>
+        <li>author-linka para o atuor do artigo atual</li>
+        <li>external-linka para um site que não faz parte do site atual.</li>
+        <li>nofollow-linka para um site não endossado, como um link pago.</li>
+    </ul>
+</p>
+        <p>
+            OBS: Quando linkar o site externo é necessario indicar a url completa, incluindo protocolo e ser for necessario o caminho à uma página específica.
+        </p>
+        <h2>Downloads</h2>
+            <p>
+                As âncoras possuem atributos específicos para isso, basta fazer a referencia para o arquivo, colocar o nome do arquivo no atributo "download" e o atributo "type" para indicar que tipo de arquivo está sendo baixado.<br>
+                <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" hreflang="en-us" target="blank" rel="external"> Tipos de medias</a>  para usar no atributo "type".<br>
+                <a href="literalmente eu-150.jpg" download="literalmente eu-150.jpeg" type="image/jpeg">DOWNLOAD exemplo</a>
+            </p>
+           
+</body>
+</html>

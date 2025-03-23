@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes</title>
+    <link rel="stylesheet" href="style fonts.css">
+ 
+</head>
+<body>
+    <main>
+        <h1>Tipografia</h1>
+            <p>
+                O estuda da tipografia é importante, <strong>porque fontes também tem a capacidade de transmitir emoções.</strong>
+            </p>
+            <dl>
+                <dt>Tipografia</dt>
+                    <dd>Estudo da <em>forma impressa</em>(do Grego, týpos) da <em>escrita</em>(do Grego, graphía).</dd>
+            </dl>
+            <p>
+                Ela surgiu em 1450, com a invenção da prensa mecánica, feita por Johanees Gutenberg. Na verdade, os chineses já tinham criado o conceito da prensa com tipos moveis muito antes, mas a Gutenberg que foi atribuido o início da <strong>Revolução da Impresa</strong>, já que antes dela cada novo exemplar de um livro era copiado a mão.
+            </p>
+            <h2>Fonte, letra e família</h2>
+                <dl>
+                    <dt>Glifos, letras, caracteres</dt>
+                        <dd>Signos alfabéticos representados para reprodução mecânica.</dd>
+                    <dt>Família tipográfica</dt>
+                        <dd>Conjunto de glifos que possuem as mesmas características anatômicas, independente de suas variações. Por exemplo posso adicionar bold na família tipografica Open sans, mas isso não vai alterar suas características.</dd>
+                    <dt>Fontes</dt>
+                        <dd>Conjuntos de glifos que formam uma família tipografica. O arquivo que armazena todos os formatos de glifos de uma família tipografica também recebe o mesmo nome.</dd>
+                </dl>
+                <h2>As fontes falam</h2>
+                    <p>
+                        Como já foi dito, as fontes também passam uma emoção. Qual tipografia se usa para representar a palavra amor, por exemplo?<br>
+                        Muito provavelmente algo com uma representação fluida e suave. Porém, também é válido se atentar se essa represetenção é legivel e tem uma boa <abbr title="fluidez de uma leitura">leiturabilidade</abbr>.
+                    </p>
+            <h2>Categorias de fontes</h2>
+                <p>
+                    As categorias de fontes são baseadas principalmente na presença ou ausência de <abbr title="também chamada de apoio ou patilha são pequenas retas que ornamentam as hastes de alguns tipos.">serifa</abbr>, as demais geralmente derivando delas ou gerando novas categorias.
+                </p>
+                <hr>
+                <h3>Fontes serifadas</h3>
+                    <p>
+                    Surgiu lá na época das prensas, as serifas tem a capacidade de guiar nossos olhos fazendo as letras  "se juntarem".<br>
+                    Atualmente não se usa fontes serifadas em grandes blocos de textos, pois se opta por fontes mais leves visualmente, porém elas são bastante usadas em títulos, pois chamam mais atenção.
+                    </p>
+                <h3>Fontes não serifadas</h3>
+                    <p>
+                        Mais conhecidas pelo seu nome em francês <em><abbr title="sem serifa">sans-serif</abbr></em>. São ôtimas para exibição em telas monitores pois transmitem a sensação de limpeza, clareza e organização.
+                    </p>
+                <h3>Fontes monoespaçadas</h3>
+                    <p>
+                        Deriva das duas categorias citadas anteriormente, sua diferença é que o espaço horizontal ocupado pelas letras é sempre o mesmo. Sua vantagem é facilitar a leitura, é muita usada para representar comando de linguagens de programação, por isso é chamada de "fonte de terminal/console".
+                    </p>
+                <h3>Fontes Script/handwriting</h3>
+                    <p>
+                        Autoexplicativas, seu uso deve ser cauteloso e evite usar em grandes blocos de texto.
+                    </p>
+                <h3>Fontes Display</h3>
+                    <p>Toda fonte que foge das definicões acima, com bastante efeitos, enfeitadas e curiosas, com algumas sequer representando letras, no lugar delas podem ser desenhos de animais, objetos,etc.</p>
+            <h2>Como aplicar</h2>
+                    <p>
+                        Para aplicar fontes usamos a propriedade font-family, se adicionamos mais de uma fonte em sequencia o navegador a vai usá-las caso a primeira falhe até chegar nas genericas como san-serif, monospaced, etc.<br>
+                        <strong>Essas últimas fontes são as Fallback fonts</strong>, elas são importantes como ultima medida, já que se o navegador não conseguir gerar nenhuma das outras elas tem mais chance de funcionarem por serem genericas.
+                    </p>
+                    <p>
+                        Ainda sim, para evitar que as <strong>fallbacks fonts</strong> sejam usadas, deve usar fontes seguras.
+                    </p>
+                    <a href="https://www.w3schools.com/cssref/css_websafe_fonts.php" target="_blank">Web safe fonts</a><br>
+                    <a href="https://www.w3schools.com/cssref/css_fonts_fallbacks.php" target="_blank">Fallback fonts</a>
+
+            <h2>Tamanhos</h2>
+                <p>
+                    Para especificar tamanhos de fontes podemos usar varias mediadas:<br>
+                    Medidas absolutas, porém mesmo sendo absolutas elas podem ser apresentadas de formas distintas, em uma tela de alta resolução um pixel pode equivaler a 1/4 de pixel, por exemplo:<br>
+                    <abbr title="centímetros">cm</abbr>, <abbr title="polegadas">in</abbr>, <abbr title="pontos(usada para referenciar conteúdo que será impresso).">pt</abbr>, <abbr title="paicas">pc</abbr>, <abbr title="pixels">px</abbr>.
+                </p>
+                <p>
+                    Medidas relativas, relativas a algumas coisa, a "em" é relativa a altura da letra "M", por exemplo:<br> <abbr title="referencia o tamanho padrão da fonte, geralmente 16px(1em=16px)">em</abbr>, <abbr title="view width">vw</abbr>(relativa a largura da viewport(tela do aparelho)).
+                </p>
+                <p>
+                    <strong>As medidas recomendadas são: "px" e "em".</strong>
+                </p>
+            <h2>Outros estilos</h2>
+                <p>
+                    Usa-se "font-style", para aplicar italico, podendo usar os valores italic(recomendado) ou oblique.
+                </p>
+                <p>
+                    Usa-se "font-weight", para aplicar negrito, podendo usar os valores númericos de 100-900 ou os nomes, respectivamente: lighter, bold e bolder. <em>Porém nem todas as fontes possuem todos os valores</em>
+                </p>
+            <h2>Atalho/shorthand/mãozinha</h2>
+                <p>
+                    A propriedade <code>font</code> serve para facilitar a formatação de fontes, o uso dela está descrito nos comentarios da CSS desse documento.
+                </p>
+                <h2>Alinhamentos</h2>
+                <p>
+                    O parametro "text-align" é auto-explicativo, seus valores são: left, right, center e justify:
+                </p>
+                <p style="text-align: left;">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ipsam dicta, perferendis maiores assumenda temporibus aspernatur est corrupti veritatis omnis accusantium rem, voluptates cum beatae totam dolorum vitae cumque perspiciatis.
+                </p>
+                <p style="text-align: justify; text-indent: 30px;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, architecto qui amet minus fuga ipsam id odit ullam sint pariatur expedita sunt ratione voluptatibus vitae assumenda odio earum iure obcaecati.
+                </p>
+                <p>
+                    Também podemos usar o parametro "text-indent", para aumentar o espaço na primeira palara do paragrafo
+                </p>
+            <h2>Dicas</h2>
+            <p>
+                Se quiser descobrir as fonts de um site use a extensão <strong>"fonts Ninja"</strong>.<br>
+                Porém essa extensão não consegue descobrir fontes de imagens, para isso podemos usar os sites:<br>
+                <a href="https://www.whatfontis.com" target="_blank">What font is</a><br>
+                <a href="https://www.fontsquirrel.com" target="_blank">Font squirrel</a><br>
+                <a href="https://www.myfonts.com">My fonts</a>
+
+
+            
+            </p>
+        <h2>Fontes externa sem baixar</h2>
+            <p>
+                Para usar fontes externas sem precisar baixar ou instalar nada no computador do cliente use o <strong>google fonts</strong>. Para saber como usar basta ver os comentarios das CSS desse documento.
+            </p>
+            <h2>Fontes externa baixada</h2>
+                <p>
+                    Para saber como usar basta ver os comentarios das CSS desse documento.
+                </p>
+            <h4>Do caralho</h4>
+            <!-- Usar a tag h4 aqui é uma puta gambiarra, não faça isso de novo.-->
+
+    </main>
+</body>
+</html>

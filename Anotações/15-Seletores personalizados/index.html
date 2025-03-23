@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores Personalizados</title>
+    <link rel="stylesheet" href="style15.css">
+</head>
+<body>
+    <h1 id="titulo-principal">Seletores personalizados</h1>
+        <p>
+            Podemos identificara elementos HTML <strong>únicos</strong>(não se pode usar o mesmo id duas vezes) com um id(#) ou agrupar elementos multíplos com caracteristicas semelhantes com um class(.)
+
+            
+        </p>
+        <p>OBS: nomeie suas classes ou ids por funcionalidade.</p>
+    <h2 class="topico">Propriedades herdadas</h2>
+        <p>
+            Da mesma que forma que as CSS externa é sobreposta pela inline os seletores personalizados vão adicionar as suas propriedades e se tiverem as mesmas propriedades elas seram sobreescritas. Como acontence na CSS desse documento, as tags <code>h1, h2 e h3</code> estão com as propriedade <code>color: "black"</code>, mas ela está sobreposta nos dois casos.
+        </p>
+        <p>
+            OBS: Você pode adicionar mais de uma class em um elemento html ou adicionar um id e uma class no mesmo elemento html.
+        </p>
+    <h2 class="topico">Pseudo-classes e pseudo-elementos</h2>
+        <p>
+            A pseudo-classe CSS é uma palavra chave usada marcada por ":", que se adiciona as declarações de um seletor e indica um estado em especifico do elemento, como exemplo:<br>
+            :hover; :visited; :empty; :checked; :active e :focus.
+        </p>
+        <p>
+            Já a pseudo-elemento CSS é uma palavra chave marcada pelos sinais "::", que se adiciona as declarações de um seletor e referencia uma parte especifica desse elemento, por exemplo:
+            ::first-letter; ::first-line; ::before; ::after.
+        </p>
+        <h2 class="exemplo">Personalizando links</h2>
+        <!--
+        Kawasaki: branco, verde e preto
+        Foi mal: preto e branco
+        So Dumb: verde e rosa
+        -->
+        <p>
+            <a target="-blank" class="link-bvp" href="https://www.youtube.com/watch?v=xYrP9hx_sls">Kawasaki</a>
+            <br>
+            <a target="-blank" class="link-bp" href="https://www.youtube.com/watch?v=fXQuOxUC-Co">Foi mal</a>
+            <br>
+            <a target="-blank" class="link-vr" href="https://www.youtube.com/watch?v=JEprM03TXp4">So dumb</a>
+        </p>
+        <h2 class="exemplo">Conteúdo oculto e uso de divs</h2>
+        <div>
+            Passe o mouse aqui
+            <p>UAAAAUUU</p>
+        </div>
+
+    <!--Para editar dois lugares diferentes ao mesmo tempo segure alt e clique nos lugares que vc deseja editar
+    
+    nossa não compensa.
+
+    nossa não compensa.
+    -->
+</body>
+</html>

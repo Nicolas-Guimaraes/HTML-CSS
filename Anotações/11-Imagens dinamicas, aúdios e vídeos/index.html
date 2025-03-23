@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens dinamicas, aúdios e vídeos</title>
+    <link rel="stylesheet" href="../test page style.css">
+</head>
+<body>
+    <h1>Imagens dinamicas, aúdios e vídeos</h1>
+    <hr>
+    <h2>Imagens dinamicas</h2>
+    <p>
+        Um conteúdo de sites deve se adaptar a tamanhos de tela diferentes, o contéudo que mais sofre com isso são as imagens, podemos redimensiona-lás com as css, mas isso não mudara o seu tamanho, consequentemente aumentando o consumo de dados e deixando o site lento.
+    </p>
+    <p>
+        Para criar imagens flexiveis usaremos as tags <code>&lt;picture&gt;</code> e <code>&lt;source&gt;</code>:<br>
+        A tag <code>&lt;picture&gt;</code> serve para representar suas crianças, dentro dela colocaremos as tags <code>&lt;source&gt;</code> e <code>&lt;img&gt;</code>. A tag <code>&lt;source&gt;</code> deve respeitar uma ordem crescente dos valores nos atributos "max-widht" e a tag <code>&lt;img&gt;</code> deve sempre vir por último <br>
+        E a tag  <code>&lt;source&gt;</code> indica a mídia alternativa para outro elemento de midia. Ela possui 3 atributos:
+            <ul>
+                <li><strong>type</strong>-indica o tipo de media.</li>
+                <li><strong>srcset</strong>-indica o arquivo a ser carregado quando o tamanho indicado pelo atributo "media" é atingido.</li>
+                <li><strong>media</strong>-Indica o tamanho maximo, com a propriedade "max-width", a ser considerado para carregar a imagem indicada no atributo "srcset".</li>
+            </ul>
+    </p>
+    <p>
+      OBS: Colocar um valor ligeiramente acima do tamnho da imagem na propriedade "max-widht" gera resultado mais interessantes.
+    </p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="letra g com fundo verde">
+    </picture>
+    <h2>Aúdio</h2>
+        <p>
+            Para colocar um aúdio em nosso site basta usar as tags <code>&lt;audio&gt;</code> e <code>&lt;source&gt;</code>.<br>
+            A tag <code>&lt;audio&gt;</code> tem alguns atributos:
+        </p>
+                <ul>
+                    <li><strong>preload</strong>-indica se o aúdio será pre-carregado e tem três valores:</li>
+                        <ul>
+                            <li><strong>metadata</strong>-carrega apenas as informações sobre o arquivo(tamanho, tempo, informações de direito)</li>                            
+                            <li><strong>none</strong>-não carrega nada até que o úsuario ou um script inicie a reprodução.</li>
+                            <li><strong>auto</strong>-carrega o arquivo inteiro assim que a página é carregada.</li>
+                        </ul>
+                        <li><strong>controls</strong>-apresenta o player na tela, para que o úsuario possa interagir com ele.</li>
+                        <li><strong>loop</strong>-vai fazer que o aúdio se repita quando terminar.</li>
+                        <li><strong>autoplay</strong>-inicia a reprodução do aúdio assim que a página é carregada.</li>
+                </ul>
+        <p>
+            Já a tag <code>&lt;source&gt;</code> só usa atributos "src" e "type", que já estamos acostumados.   
+        </p>
+        <audio preload="metadata" controls>
+            <source src="musga.MP3" type="audio/MP3">
+            <source src="musga.WAV" type="audio/WAV">
+        </audio>
+        <p>
+            OBS: Coloque o <code>&lt;source&gt;</code> com seu formato de aúdio favorito primeiro, caso ele falhe os outros irão carregar.
+        </p>
+        <h2>Vídeo</h2>
+            <p>
+            Basta usar a tag <code>&lt;video&gt;</code>. Seus atributos são:
+            </p>
+                <ul>
+                    <li><strong>width</strong>-indica a largura do vídeo</li>
+                    <li><strong>poster</strong>-indica a imagem que aparece antes de apertar o play</li>
+                    <li><strong>Autoplay e controls</strong>- As mesmas funções descritas no áudio.</li>
+                </ul>
+            <p>
+                OBS: Arquivos de vídeo não são tão simples quanto os outros, nos quais o formato indica o padrão para abrir e reproduzir a mídia. Vídeos possuem formatos e codecs(dispositivo de hardware ou software que decodifica sinais).<br>
+                Os formatos mais aceitos são MPEG, WEBM e OGG, com os 2 primeiros tendo mais compatibilidades.
+            </p>
+            <video width="600" height="400" poster="video/belchior.jpg" controls>
+                <source src="video/Grande Belchior.mp4" type="video/mp4">
+            </video>
+            <p>
+                Porém, hospedar os proprios vídeos é pesado e caro porque quando mais pessoas acessam o site o vídeo consome uma banda desgraçada.<br>
+                Para contornar isso podemos hospedar nossos vídeos no youtube e apenas incorpora-lós na HTML. Para fazer isso basta clicar no botão "compartilhar" e "incorporar".
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/JA5vg0BPfXU?si=GCMphQmGUxS0k-MZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </body>
+</html>
