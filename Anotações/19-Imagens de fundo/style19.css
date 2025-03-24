@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+body .quadrado{
+    display: inline-block;
+    margin: 5px;
+    height: 300px;
+    width: 300px;
+    background-color: lightgray;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+body{
+    /*
+        background-color: whitesmoke;
+        background-image: url(pug.jpg);
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    */
+
+    background: whitesmoke url(pug.jpg) center right no-repeat fixed;
+}
+/*
+A imagem se repete(nox exeixos: x e y) quando seu tamanho não é suficente para cobrir a box inteira.
+Para alterar isso podemos usar a propriedade "background-repet", com os seguintes valores:
+background-repet: repeat; = comportamente comum
+background-reapet: no-repeat; = sem repetição
+background-repeat: repeat-x; = repete apenas no eixo x(horizontal)
+background-repeat: repeat-y; = repete apenas no eixo y(vertical)
+-----------------------
+Para mudar a posição de referencia da repetição use a propriedade "background-position", para usar os seus valores é bem intuitivo,
+basta definir o eixo x( left, center, right) e o eixo y(top, center, bottom).
+-----------------------
+Para mudar o tamanho da imagem use a propriedade "background-size", com os seguintes valores:
+"auto" = padrão, a imagem será aplicada em seu tamanho original.
+
+[lenght]px ou % = redimensiona a imagem, caso você use apenas um valor redimensiona a largura e ajusta a altura, você também
+pode informar os dois valores ou usar um valor percentual.
+
+cover = ajusta a imagem para que ela sempre apareça na tela sem cortes.
+
+contain = ajusta a imagem para que ela sempre preencha o contêiner, sem se preocupar com cortes.
+-----------------------
+Para configurar o vinculo da imagem com o resto do conteúdo da página use a propriedade "background-attachment", com os valores:
+
+scroll = a imagem vai rolar junto com o conteúdo
+
+fixed = a imagem de fundo vai ficar fixada enquanto o conteúdo rola
+-----------------------
+Shorthand::
+
+background: whitesmoke url(pug.jpg) center right no-repeat fixed;
+*/
+#q1{
+    background-color: skyblue;
+}
+
+#q2{
+    background-image: linear-gradient(to bottom, yellow, orange);
+}
+
+#q3{
+    background-image: url(guaxinin.jpg);
+}
