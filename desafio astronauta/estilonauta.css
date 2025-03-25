@@ -14,8 +14,13 @@ body{
     
     Tudo isso substituido por "100vh" = 100 view height, que a altura da viewport.
     */
-    background: url(espaco.jpg) no-repeat center center fixed;
+    background: black url(espaco.jpg) no-repeat center center fixed;
+    /*
+    Definir uma cor de fundo é importante porque caso a internet esteja lenta, a imagem vai demorar pra carregar, enquanto isso a cor de fundo é exibida.
+    */
     background-size: cover;
+    /* Segundo o manual da W3S a declaração 'size' ficaria logo após a 'position', mas ela continua não funcionando.*/
+    
     position: relative;
 }
 
