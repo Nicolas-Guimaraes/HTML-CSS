@@ -5,10 +5,15 @@
 }
 
 body{
+    height: 100vh;
+    /*
     min-height: 500px;
     max-height: 1400px;
     min-width: 400px;
     max-width: 1680px;
+    
+    Tudo isso substituido por "100vh" = 100 view height, que a altura da viewport.
+    */
     background: url(espaco.jpg) no-repeat center center fixed;
     background-size: cover;
     position: relative;
