@@ -5,13 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criando tabelas</title>
     <style>
-       table{
+        /*-----------------tabela teste------------------*/
+       table.teste{
         border-collapse: collapse;
        }
-       td{
+       td.teste{
             border: 1px solid black;
-            width: 50px;
+            width: 100px;
+            height: 100px;
+            font-weight: 400;
+            font-size: 1.3em;
+            text-align: center;
+            vertical-align: top;
+            /*
+            a declaração 'vertical-align' serve
+            para inline boxes, seus valores são:
+            top
+            middle
+            bottom
+            Parecido com os valores da declaração
+            'background-postion'.
+            */
+            
         }
+         /*-----------------nota------------------*/
+        div.esperanota{
+            content-visibility: hidden;
+            background-color: cornflowerblue;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 10px;
+            padding: 0px;
+            
+        }
+
+        div.esperanota:hover{
+            content-visibility: visible;
+            margin-bottom: 100px;
+        }
+        
+        p.nota{
+            background-color: cornflowerblue;
+            height: fit-content;
+            width: 500px;
+            border-radius: 20px;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: justify;
+            
+        }
+         /*-----------------Primeira tabela------------------*/
+         table#primeira{
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+            border-collapse: collapse;
+         }
+
+        caption.primeira{
+            background-color: rgba(128, 128, 128, 0.239);
+            font-weight: 700;
+            font-size: 1.2em;
+            padding: 5px;
+         }
+
+         tr.linha-escura{
+            background-color: gray;
+            color: whitesmoke;
+            font-weight:600;
+         }
+
+         td.primeira{
+            border: 1px solid black;
+            padding: 3px;
+            width: 200px;
+            vertical-align: middle; 
+         }
     </style>
 </head>
 <body>
@@ -21,32 +89,79 @@
             table header(th) = cabeçalho da tabela
             table data(td) = contéudo da celula.
     -->
-    <table>
+    <table class="teste">
         <tr>
-            <td>a1</td>
-            <td>b1</td>
-            <td>c1</td>
+            <td class="teste">a1</td>
+            <td class="teste">b1</td>
+            <td class="teste">c1</td>
         </tr>
         <tr>
-            <td>a2</td>
-            <td>b2</td>
-            <td>c2</td>
+            <td class="teste">a2</td>
+            <td class="teste">b2</td>
+            <td class="teste">c2</td>
         </tr>
         <tr>
-            <td>a3</td>
-            <td>b3</td>
-            <td>c3</td>
+            <td class="teste">a3</td>
+            <td class="teste">b3</td>
+            <td class="teste">c3</td>
         </tr>
         <tr>
-            <td>a4</td>
-            <td>b4</td>
-            <td>c4</td>
+            <td class="teste">a4</td>
+            <td class="teste">b4</td>
+            <td class="teste">c4</td>
         </tr>
         <tr>
-            <td>a5</td>
-            <td>b5</td>
-            <td>c5</td>
+            <td class="teste">a5</td>
+            <td class="teste">b5</td>
+            <td class="teste">c5</td>
         </tr>
     </table>
+    <hr>
+    <div class="esperanota">
+        <p class="nota">
+            <strong>Tableless</strong>: No passado, com a HTML4, as tabelas foram usadas para fazer a estruturas dos sites.
+            Oque não deve ser feito nunca mais, porém elas também não devem ser demonizadas, apenas serem usadas para sua função original de organizar dados
+        </p>
+    </div>
+    <h1>Primeira exemplo de tabela:</h1>
+    <table id="primeira">
+        <caption class="primeira">População das unidades Federativas</caption>
+            <tr class="linha-escura">
+                <td class="primeira">Cidade</td>
+                <td class="primeira">População</td>
+            </tr>
+            <tr>
+                <td class="primeira">São Paulo</td>
+                <td class="primeira">45.000.000</td>
+            </tr>
+            <tr>
+                <td class="primeira">Minas Gerais</td>
+                <td class="primeira">30.000.000</td>
+            </tr>
+            <tr>
+                <td class="primeira">Rio de Janeira</td>
+                <td class="primeira">30.000.000</td>
+            </tr>
+            <tr>
+                <td class="primeira">Bahia</td>
+                <td class="primeira">30.000.000</td>
+            </tr>
+            <tr>
+                <td class="primeira">Paraná</td>
+                <td class="primeira">30.000.000</td>
+            </tr>
+            <tr class="linha-escura">
+                <td class="primeira">Total</td>
+                <td class="primeira">110.000.000</td>
+            </tr>
+    </table>
+        <div class="esperanota">
+            <p class="nota">
+                Essa tabela não foi construido como indica o material, pois fiz no olho usando as tags apresentadas antes.<br>
+                No material é indicado usar as tags semânticas &lt;thead&gt;, &lt;tbody&gt; e &lt;tfotter&gt;, as quais geralmente são usadas em tabelas maiores.<br>
+                Outra coisa que errei é que a tag &lt;th&gt;,
+                marca o título, então ela deveria estar sendo usada em cidade e população.<br>
+            </p>
+        </div>
 </body>
 </html>
