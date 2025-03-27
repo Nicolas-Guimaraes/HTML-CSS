@@ -42,7 +42,7 @@
 
         div.esperanota:hover{
             content-visibility: visible;
-            margin-bottom: 100px;
+            margin-bottom: 40%;
         }
         
         p.nota{
@@ -80,6 +80,36 @@
             width: 200px;
             vertical-align: middle; 
          }
+         /*-----------------Primeira tabela certa------------------*/
+         table#primeiracerta{
+            width: 600px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+         }
+
+        caption{
+            background-color: rgba(128, 128, 128, 0.411);
+            font-size: 1.3em;
+            padding: 3px;
+            font-weight: 700;
+        }
+         thead{
+            background-color: gray;
+            text-align: left;
+            color: white;
+         }
+
+         th,td{
+            border: 1px solid black;
+            padding: 5px;
+         }
+         tfoot{
+            background-color: gray;
+            text-align: left;
+            color: white;
+         }
+
     </style>
 </head>
 <body>
@@ -161,7 +191,47 @@
                 No material é indicado usar as tags semânticas &lt;thead&gt;, &lt;tbody&gt; e &lt;tfotter&gt;, as quais geralmente são usadas em tabelas maiores.<br>
                 Outra coisa que errei é que a tag &lt;th&gt;,
                 marca o título, então ela deveria estar sendo usada em cidade e população.<br>
+                A seguir a tabela feita da forma indicada no material:
             </p>
         </div>
+    <table id="primeiracerta">
+        <caption>
+            População das unidades Federativas
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Cidade</th>
+                <th scope="col">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td>45.000.000</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td>30.000.000</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeira</td>
+                <td>30.000.000</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td>30.000.000</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td>30.000.000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total</th>
+                <td>110.000.000</td>
+            </tr>
+        </tfoot>
+    </table>
 </body>
 </html>
