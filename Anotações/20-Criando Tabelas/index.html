@@ -88,19 +88,19 @@
             font-family: Arial, Helvetica, sans-serif;
          }
 
-        caption{
+         table#primeiracerta caption{
             background-color: rgba(128, 128, 128, 0.411);
             font-size: 1.3em;
             padding: 3px;
             font-weight: 700;
         }
-         thead{
+        table#primeiracerta thead{
             background-color: gray;
             text-align: left;
             color: white;
          }
 
-         th,td{
+         table#primeiracerta th , table#primeiracerta td{
             border: 1px solid black;
             padding: 5px;
          }
@@ -113,11 +113,95 @@
          (odd), sendo numero impar.
          (even) sendo número par
          */
-         tfoot{
+         table#primeiracerta tfoot{
             background-color: gray;
             text-align: left;
             color: white;
          }
+         /*-----------------Table#span1------------------*/
+         Table#span1{
+            width: 500px;
+         }
+         
+         Table#span1 td{
+            border: 1px solid black;
+            vertical-align: middle;
+            text-align:center;
+         }
+         /*-----------------Table#span2------------------*/
+         Table#span2{
+            width: 500px;
+            margin-top: 20px;
+         }
+         
+         Table#span2 td{
+            border: 1px solid black;
+            vertical-align: middle;
+            text-align:center;
+         }
+         /*-----------------Table#span3------------------*/
+         table#span3{
+            width: 500px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border: 1px solid black;
+            margin: 20px;
+            border-collapse: collapse;
+         }
+
+         table#span3 thead{
+            color: whitesmoke;
+            font-weight: 600;
+            background-color: gray;
+         }
+
+         table#span3 tbody{
+            vertical-align: middle;
+            text-align: center;
+         }
+
+         table#span3 tbody#foot{
+            background-color: gray;
+            color: white;
+            text-align: center;
+         }
+
+         table#span3 > tbody#foot th{
+            text-align: left;
+        }
+
+         table#span3 tfoot{
+            background-color: gray;
+            color: white;
+            text-align: center;
+         }
+         table#span3 > tfoot th{
+            text-align: left;
+         }
+
+         table#span3 th, table#span3 td{
+            border: 1px solid black;
+            padding: 5px;
+         }
+         /*-----------------Table#colgroup------------------*/
+         table#colgroup td{
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+            border: 1px solid black;
+         }
+         /*-----------------colgroup------------------*/
+         col.c1{
+            background-color: purple;
+         }
+
+         col.c2{
+            background-color: cornflowerblue;
+         }
+
+         col.c3{
+            background-color: blueviolet;
+         }
+
 
     </style>
 </head>
@@ -242,5 +326,173 @@
             </tr>
         </tfoot>
     </table>
+    <div class="esperanota">
+        <p class="nota">
+            A seguir, tabelas criadas para treinar a expansão das celulas, usando a propriedade rolspan e colspan:
+            OBS: vou fazer as duas primeiras sem semantica, pq não faz mto sentido.
+        </p>
+    </div>
+    <table id="span1">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td colspan="3">8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td rowspan="2">10</td>
+            <td colspan="2">11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+    </table>
+    
+    <table id="span2">
+        <tr>
+            <td colspan="4">A</td>
+            <td rowspan="4">B</td>
+        </tr>
+        <tr>
+            <td rowspan="4">C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr>
+            <td>J</td>
+            <td>L</td>
+            <td>M</td>
+        </tr>
+        <tr>
+            <td colspan="4">N</td>
+        </tr>
+    </table>
+    <table id="span3">
+        <thead>
+            <tr>
+                <th scope="col" rowspan="2">Área</th>
+                <th scope="col" rowspan="2">Disciplinas</th>
+                <th scope="col" colspan="2">Notas</th>
+                <th scope="col" rowspan="2">Média</th>
+            </tr>
+            <tr>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4">Exatas</td>
+                <td>Matematica</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Física</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Quimica</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+        </tbody>
+        <tbody id="foot">
+            <tr>
+                <th colspan="4">Média de Exatas</th>
+                <td>0.0</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td rowspan="2">Humanas</td>
+                <td>História</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+            <tr>
+                <td>Geografia</td>
+                <td>0.0</td>
+                <td>0.0</td>
+                <td>0.0</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4">Média de Humanas</th>
+                <td>0.0</td>
+            </tr>
+        </tfoot>
+    </table>
+    <table id="colgroup">
+        <colgroup>
+            <col class="c1">
+            <col class="c2" span="2">
+            <col class="c3">
+            <col class="c1">
+        </colgroup>
+        <tr>
+            <td>1a</td>
+            <td>1b</td>
+            <td>1c</td>
+            <td>1d</td>
+            <td>1e</td>
+        </tr>
+        <tr>
+            <td>2a</td>
+            <td>2b</td>
+            <td>2c</td>
+            <td>2d</td>
+            <td>2e</td>
+        </tr>
+        <tr>
+            <td>3a</td>
+            <td>3b</td>
+            <td>3c</td>
+            <td>3d</td>
+            <td>3e</td>
+        </tr>
+        <tr>
+            <td>4a</td>
+            <td>4b</td>
+            <td>4c</td>
+            <td>4d</td>
+            <td>4e</td>
+        </tr>
+    </table>
+    <div class="esperanota">
+        <p class="nota">
+            Para tornar uma tabela muito longa visivel em uma tela pequena coloque-a em uma caixa qualquer e faça uma declaração com propriedade "overflow-x" com os valores auto ou scroll. 
+        </p>
+    </div>
 </body>
 </html>
