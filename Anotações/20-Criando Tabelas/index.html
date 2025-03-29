@@ -86,6 +86,7 @@
             border: 1px solid black;
             border-collapse: collapse;
             font-family: Arial, Helvetica, sans-serif;
+            position: relative;
          }
 
          table#primeiracerta caption{
@@ -94,10 +95,22 @@
             padding: 3px;
             font-weight: 700;
         }
+        
         table#primeiracerta thead{
             background-color: gray;
             text-align: left;
             color: white;
+         }
+        /*Cabeçalho fixo em tabelas grandes:
+        A propriedade 'position' com o valor 'relative'
+        é necessaria na declaração da tabela para ela
+        funcionar.
+        OBS: verifique a compatibilidade com os navegadores
+        ------------------*/
+         table#primeiracerta thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: gray;
          }
 
          table#primeiracerta th , table#primeiracerta td{
@@ -112,6 +125,10 @@
          A pseudo classe 'nth-child() significa number table header-child, ou seja, ela permite selicionar um filho pelo número:
          (odd), sendo numero impar.
          (even) sendo número par
+         ou
+         2n(de dois em dois)
+         3n(de três em três)
+         ...
          */
          table#primeiracerta tfoot{
             background-color: gray;
@@ -390,7 +407,7 @@
             <tr>
                 <th scope="col" rowspan="2">Área</th>
                 <th scope="col" rowspan="2">Disciplinas</th>
-                <th scope="col" colspan="2">Notas</th>
+                <th scope="colgroup" colspan="2">Notas</th>
                 <th scope="col" rowspan="2">Média</th>
             </tr>
             <tr>
@@ -427,7 +444,7 @@
         </tbody>
         <tbody id="foot">
             <tr>
-                <th colspan="4">Média de Exatas</th>
+                <th scope="row" colspan="4">Média de Exatas</th>
                 <td>0.0</td>
             </tr>
         </tfoot>
@@ -448,11 +465,21 @@
         </tbody>
         <tfoot>
             <tr>
-                <th colspan="4">Média de Humanas</th>
+                <th scope="row" colspan="4">Média de Humanas</th>
                 <td>0.0</td>
             </tr>
         </tfoot>
     </table>
+
+    <div class="esperanota">
+        <p class="nota">
+            A propriedade 'scope' define onde estão os dados de um 'th'(table header), com os valores:<br>
+            row<br>
+            rowgroup<br>
+            col<br>
+            colgroup
+        </p>
+    </div>
     <table id="colgroup">
         <colgroup>
             <col class="c1">
