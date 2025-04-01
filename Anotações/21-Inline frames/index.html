@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline frames(módulo 4)</title>
+    <link rel="stylesheet" href="style21.css">
+</head>
+<body>
+    <h1>
+        Iframe(<mark>Inline</mark> frame)
+    </h1>
+    <!-- O tamanho padrão do iframe é 300x150-->
+    <p>
+        Acesse o <iframe frameborder='0' src="https://nicolas-guimaraes.github.io/HTML-CSS/" scrolling="no"><a href="https://nicolas-guimaraes.github.io/HTML-CSS/"></a></iframe> e não veja nada, pq não tem nada interessante no repositorio. Caso queira ver algo interessante acesse o site do <strong>Curso em vídeo</strong>, normalmente falaria o youtube ou netflix, mas tentei com eles e a conexão foi recusada, deve haver algum tipo de proteção.
+    </p>
+    <!--
+    Para escrever adicionar propriedes mais rápido use '[]'.
+    -->
+    <!--
+    Propriedades:
+   " frameborder='0'", remove a borda 3d padrão.
+
+    Valores do scrolling:
+
+    no - remove o scroll
+    
+    yes- adiciona o scroll, independente do tamanho do conteúdo da página.
+    
+    auto- adiciona o scroll caso o conteúdo da pagina for maior que o iframe.
+
+    OBS: Caso  o navegador não suporte o iframe o contéudo da tag será exibido.
+    -->
+    <h1>
+        Paginas locais dentro do iframe
+    </h1>
+        <iframe src="outra-página.html" width="600px" height="300px" frameborder="0"></iframe>
+
+        <p>
+            OBS: carregar um iframe é o mesmo que abrir uma outra aba, então tome cuidado com seu uso e qual aba será colocada nele.
+        </p>
+        <h1>
+            Conteúdo dentro do iframe
+        </h1>
+        <div id="retrato"><iframe srcdoc="<h2>Título</h2> <p>Documento gerado estaticamente</p> <img src='Veetor.jpg' width='100px'>" frameborder="0"></iframe></div>
+    <h1>
+        Direcionando novo contéudo para iframe
+    </h1>
+        
+        <iframe name='quadro' src="outra-página.html" frameborder="0"><a href="outra-página.html" target="_blank">Outra página</a></iframe>
+
+        <a href="https://nicolas-guimaraes.github.io/HTML-CSS/" target="quadro">Change</a>
+        
+        <a href="outra-página.html" target="quadro">Return</a>
+    <h1>
+        Consequencias com uso do iframe
+    </h1>
+    <p>
+        OBS: Não confunda frames e iframes, antigamente as tags &lt;frameset&gt; e &lt;frame&gt; eram usadas para organizar os layotes dos sites.<br>
+        Ainda hoje alguns ainda usam para fazer uma barra de menu fixa, mas ela caminha a passos largos para se tornar obsoleta.
+    </p>
+    <h2>Problemas com o mecanismo de busca</h2>
+    <p>
+        Para que seu contéudo apareça nas buscas o 'Googlebot' precisa escanear seu codigo html e indexá-ló.
+        Na documentação oficial do google é exclarecido que o 'Googlebot' tem dificuldade de diferenciar o contéudo do site e do iframe, oque gera problemas na indexação.
+    </p>
+    <h2>Usabilidade</h2>
+    <ul>
+        <li>Leitores de tela não conseguem interpretar iframes de forma
+            eficiente
+        </li>
+        <li>O botão voltar da pagina fica confuso</li>
+        <li>sites responsivos muito provavelmente iram ficar quebrados</li>
+        <li><strong>segurança</strong></li>
+    </ul>
+    <h2>Segurança</h2>
+    <p>
+        Colocar um iframe no seu site o deixa vuneravel a ataques do tipo cross-site, mas a formas de evitar isso.
+    </p>
+    <h2>Tornando as Coisas mais seguras</h2>
+    <h3>Caixa de areia</h3>
+    <p>A propriedade <code>sandbox="sandbox"</code> foi implementada à HTML5 para evitar isso, basta inclui-la na declaração do &lt;iframe&gt;, ela funcionando
+        criando um ambiente controlado, desabilitando algumas funções do site. As funções desablitadas
+        dependem do valor:
+        <!--
+        "Sandbox":
+        • Não pode mais enviar dados de formulários 
+        • Não pode mais executar scripts  
+        • Desabilita todo tipo de API, janelas modais e popups 
+        • Desabilita todo tipo de plugin com <embed>, <object>, <applet> 
+        • Evita que o site dentro do iframe assuma a navegação top level do navegador 
+        • Bloqueia recursos como autoplay e foco automático em elementos de formulário 
+        
+        Caso você queira desbloquear alguma função, basta adicionar o valor 'allow+função', por exemplo:
+        • allow-forms 
+        • allow-scripts 
+        • allow-modals 
+        • allow-popups 
+        • allow-same-origin 
+        • allow-top-navigation 
+        -->
+    <h3>
+        Definindo a politica de referencia(referral policy)
+    </h3>
+    <p>
+        Os sites monitoram nosso padrão de navegação atráves de um campo na http chamado 'referer Header', é o recurso que sites usam para entender nosso padrão de navegação
+        e mostrar propagandas.
+        A propriedade 'referrerpolicy' define quantos dados serão compartilhados com o site do destino, a maneira mais anonima de navegação é o valor 'no-referer'.
+        Mas existem outros valores, como:
+        <!--
+        • no-referer-when-downgrade (padrão) 
+        • origin 
+        • origin-when-cross-origin 
+        • same-origin 
+        • strict-origin 
+        • strict-origin-when-cross-origin 
+        • unsafe-url   
+        -->
+    </p>
+    <h2>
+        Outras formas de usar o iframe
+    </h2>
+    <p>
+        OBS: nenhum desses recursos funcionara corretamente usando a propriedade 'sand-box'.
+    </p>
+    <p>
+        Além de incorporar vídeos do youtube e vimeo também podemos incorporar localizações do <strong>google maps</strong> e documentos do <strong>google docs</strong>.
+    </p>
+</body>
+</html>
